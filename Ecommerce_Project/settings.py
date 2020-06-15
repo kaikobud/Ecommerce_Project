@@ -29,9 +29,15 @@ INSTALLED_APPS = [
     'crispy_forms',
     'App_Login',
     'App_Shop',
+    'App_Order',
+    'App_Payment',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# custom user model
+AUTH_USER_MODEL = 'App_Login.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -114,4 +120,4 @@ STATICFILES_DIRS = [STATIC_DIR, ]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-LOGIN_URL = '/'
+LOGIN_URL = '/account/login/'
